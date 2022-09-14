@@ -38,7 +38,7 @@ export const AppReducer: React.FC = () => {
   return (
     <div className="card">
       <figure>
-        {appState.isLoading ? (<Loading />) : (<img src={appState.uri} alt="funny image" />)}
+        {appState.isLoading ? <Loading /> : <img src={appState.uri} alt="funny image" />}
       </figure>
       <footer>
         <label>

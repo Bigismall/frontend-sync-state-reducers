@@ -2,7 +2,7 @@ import * as React from "react";
 import { Loading } from "./Loading";
 import placeholder from "./img/start-using-reducers.png";
 
-export const App: React.FC = () => {
+export const AppState: React.FC = () => {
   const API_URL = "https://rickandmortyapi.com/api/character/";
 
   const [isLoading, setIsLoading] = React.useState(false);
@@ -14,11 +14,9 @@ export const App: React.FC = () => {
       return;
     }
 
-
     setIsLoading(true);
     const result = await fetch(API_URL + Math.round(Math.random() * 50));
     const response = await result.json();
-
 
     //wrong part
     setUri(response.image);

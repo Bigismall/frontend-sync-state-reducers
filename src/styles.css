@@ -1,6 +1,10 @@
+body {
+  max-width: 960px;
+}
 .card {
   display: block;
-  width: 600px;
+  width: 420px;
+  padding: 10px;
   height: auto;
   border: 1px solid cornflowerblue;
   border-radius: 10px;
@@ -20,5 +24,12 @@ footer {
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
+}
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
 }

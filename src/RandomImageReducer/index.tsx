@@ -1,8 +1,7 @@
-
 export interface RandomImageState {
-  isLoading: boolean
-  uri: string
-  allowFetch: boolean
+  isLoading: boolean;
+  uri: string;
+  allowFetch: boolean;
 }
 
 export enum RandomImageActions {
@@ -12,19 +11,22 @@ export enum RandomImageActions {
 }
 
 export interface RandomImageAction {
-  type: RandomImageActions,
+  type: RandomImageActions;
   payload?: {
-    uri: string
-  }
+    uri: string;
+  };
 }
 
-export const RandomImageReducer = (state:RandomImageState,action:RandomImageAction):RandomImageState => {
+export const RandomImageReducer = (
+  state: RandomImageState,
+  action: RandomImageAction
+): RandomImageState => {
   switch (action.type) {
     case RandomImageActions.FETCH_START:
-      return {...state, isLoading: true}
+      return { ...state, isLoading: true };
     case RandomImageActions.FETCH_END:
-      return {...state, isLoading:false, uri:action?.payload?.uri ?? ''}
+      return { ...state, isLoading: false, uri: action?.payload?.uri ?? "" };
     case RandomImageActions.TOGGLE:
-      return {...state, allowFetch:!state.allowFetch}
+      return { ...state, allowFetch: !state.allowFetch };
   }
-}
+};

@@ -2,9 +2,6 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 import "./styles.css";
-//import { App } from "./App";
- import { AppReducer } from "./AppReducer";
+import { Root } from "./Root";
 
-var mountNode = document.getElementById("app");
-// ReactDOM.render(<App />, mountNode);
-ReactDOM.render(<AppReducer />, mountNode);
+ReactDOM.render(<Root />, document.getElementById("root"));
